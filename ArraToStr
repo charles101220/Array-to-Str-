@@ -1,0 +1,22 @@
+import java.util.*;  
+public class ArrayListConversion2 {  
+        public static String[]   
+/* User Define function to Access the Array elements */  
+GetArrayElements(ArrayList<String> arr)   
+        {   
+            Object[] objArr = arr.toArray(); // ArrayList to object array conversion  
+            String[] str = Arrays.copyOf(objArr, objArr.length, String[].class); // Object array to String array conversion  
+            return str;   
+        }   
+        public static void main(String[] args)   
+        {   
+            ArrayList<String>   
+                l = new ArrayList<String>(); //ArrayList implementation  
+            l.add( "Hello" ); //adding elements  
+            l.add( "Charles" );   
+            l.add( "Hava Nice Day" );   
+            System.out.println("ArrayList: " + l); // Printing ArrayList  
+            String[] str = GetArrayElements(l); //Get String Array  
+            System.out.println("String Array[]: "  + Arrays.toString(str)); // Printing new list  
+        }   
+    }   
